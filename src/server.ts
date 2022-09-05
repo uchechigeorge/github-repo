@@ -3,8 +3,7 @@ import app from "./app";
 const start = (port?: number) => {
   const PORT = port || process.env.PORT || 5000;
   try {
-
-    app.listen(port, () => {
+    app.listen(PORT, () => {
       console.log(`Listening to port ${PORT}`);
     });
   } catch(err) {
@@ -14,4 +13,4 @@ const start = (port?: number) => {
   
 }
 
-start(3333);
+start();

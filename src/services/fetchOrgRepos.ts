@@ -1,9 +1,15 @@
 import axios from "axios";
 
+/** 
+ * Fetch repos from an organization from the Github api
+ * @param organization The owner/organization of the repository
+ * @param options For test purposes
+*/
 const fetchOrganizationRepos = async (organization: string, options?: any) => {
 
   let baseUrl = 'https://api.github.com';
 
+  // Check for test purposes
   if(options?.serviceUnavailable && process.env.NODE_ENV !== 'production') {
     baseUrl = '';
   }

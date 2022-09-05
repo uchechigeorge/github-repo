@@ -33,17 +33,33 @@ ACCESS_TOKEN
 ___
 
 ## Endpoints  
- - __GET__  github/repo-single - Get single repository  
-### Params  
-repo_name - Name of the repository eg. facebook/react(has to be in this format)  
-### Headers  
-Authorization - ACCESS_TOKEN (from .env file) 
+- ### __GET__  github/repo-single - Get single repository  
 
-- __GET__  github/repo-multiple - Get multiple repositories  
-### Params  
-repo_names - Collection of repository names, seperated by commas eg. facebook/react,facebook/react-native(has to be in this format)  
-### Headers  
-Authorization - ACCESS_TOKEN (from .env file) 
+ #### HEADERS 
+key | value
+----| -----  
+Authorization | ACCESS_TOKEN (from .env file)  
+
+#### PARAMS  
+key | description | value(eg)
+--- | ----------- | --------  
+repo_name | Name of the repository | facebook/react(has to be in this format)  
+
+---
+
+- ### __GET__  github/repo-multiple - Get multiple repositories  
+
+#### HEADERS
+key | value
+--- | -----  
+Authorization | ACCESS_TOKEN (from .env file)  
+#### PARAMS  
+key | description | value(eg)
+--- | ----- | -----------
+repo_names | Collection of repository names, seperated by commas | facebook/react,facebook/react-native(has to be in this format)  
+organization | Organization name  | facebook
+[ _Only one of the params can be supplied at a time_ ]
+
 
 
 

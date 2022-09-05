@@ -2,6 +2,9 @@ import { Request, Response } from "express";
 import fetchOrganizationRepos from "../services/fetchOrgRepos";
 import fetchRepo from "../services/fetchRepo";
 
+/**
+ * Get multiple repo controller
+ */
 export const getMultipleRepos = async (req: Request, res: Response) => {
   try{
 

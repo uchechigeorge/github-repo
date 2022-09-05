@@ -1,4 +1,7 @@
 import { NextFunction, Request, Response } from "express";
+/**
+ * Middleware for authentication
+ */
 
 const authenticate = (req: Request, res: Response, next: NextFunction) => {
 
