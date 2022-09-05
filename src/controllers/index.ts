@@ -1,7 +1,9 @@
-import { getRepoInfo } from "./github";
+import { getSingleRepo } from "./github-single";
+import { getMultipleRepos } from "./github-multiple";
 
 const controllers = {
-  getRepoInfo,
+  getSingleRepo,
+  getMultipleRepos
 }
 
 export default controllers;

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node www/app",
-    "dev": "nodemon src/app.ts",
+    "start": "node www/server",
+    "dev": "nodemon src/server.ts",
     "build": "npx tsc --project ./",
     "test": "jest --forceExit"
   },

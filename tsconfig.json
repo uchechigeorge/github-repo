@@ -1,6 +1,6 @@
 {
   "compileOnSave": true,
-  "exclude": ["./www", "__tests__", "jest.config.ts"],
+  "exclude": ["./www", "**/*.test.ts", "jest.config.ts"],
   "ts-node": {
     "transpileOnly": true,
     "files": true
