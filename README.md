@@ -23,6 +23,9 @@ npm run start - Run in production
 npm run build - Build typescript  
 npm run test - Run tests  
 
+_To run in production, the application will have to be built_  
+_In other words, before running **npm run start**, run **npm run build**_
+
 ___
 
 ## Env variables  
