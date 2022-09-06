@@ -4,7 +4,6 @@ Axios
 
 ___
 
-
 ## Dev Dependencies
 Nodemon  
 Typescript  
@@ -30,7 +29,7 @@ ___
 
 ## Env variables  
 PORT  
-GITHUB_ACCESS_TOKEN  
+GITHUB_ACCESS_TOKEN (_The one provided may have expired at the time of running. Provide yours in case it does not work as tests will fail. [Tokens can be generated here](https://github.com/settings/tokens/new)_)  
 ACCESS_TOKEN  
 
 ___
@@ -39,16 +38,16 @@ ___
 - ### __GET__  github/repo-single - Get single repository  
 
  #### HEADERS 
-key | value
+key | value  
 ----| -----  
 Authorization | ACCESS_TOKEN (from .env file)  
 
 #### PARAMS  
-key | description | value(eg)
+key | description | value(eg)  
 --- | ----------- | --------  
 repo_name | Name of the repository | facebook/react(has to be in this format)  
 
----
+___
 
 - ### __GET__  github/repo-multiple - Get multiple repositories  
 
