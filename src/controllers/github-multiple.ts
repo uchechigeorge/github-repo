@@ -14,7 +14,8 @@ export const getMultipleRepos = async (req: Request, res: Response) => {
     const repoNames = req.query['repo_names'];
     const hasRepoNames = repoNames && repoNames.toString().trim() !== '';
 
-    let result: any;
+    let results: any[] = [];
+    let meta: any;
 
     // If no params to work with
     if(!hasOrganisation && !hasRepoNames) {
@@ -37,7 +38,7 @@ export const getMultipleRepos = async (req: Request, res: Response) => {
       }
 
       // Transform repo data
-      const reposArr = repoNameRes.data?.map(repo => {
+      const reposArr = repoNameRes.data?.map((repo: any) => {
         return {
           repoName: repo.full_name,
           description: repo.description,
@@ -45,7 +46,7 @@ export const getMultipleRepos = async (req: Request, res: Response) => {
         };
       });
 
-      result = reposArr
+      results = reposArr
     } 
     
     // Has repos array
@@ -91,11 +92,15 @@ export const getMultipleRepos = async (req: Request, res: Response) => {
         }
       }
 
-      result = repoResults;
+      results = repoResults;
+      meta = {
+        totalReturned: results?.length,
+        totalNotFound: reposArr.length - results.length
+      }
     }
  
 
-    res.status(200).json({message: 'OK', result});
+    res.status(200).json({message: 'OK', results, meta});
 
   } catch(err: any) {
     res.status(500).json({message: err.message});
